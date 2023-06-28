@@ -1,4 +1,4 @@
-﻿#include <iostream>
+#include <iostream>
 using namespace std;
 int main()
 {
@@ -32,13 +32,16 @@ int main()
     }
 
     float sum1 = 0;
-    float t;   
+    int t[5];   
     for (int i = 0; i < 5; i++) 
     { 
         cout << "Введите размер стороны: ";
-        cin >> t;
-        sum1 += t;
-    }    
+        cin >> t[i];
+    } 
+    for (int i = 0; i < 5; i++)
+    {
+       sum1 += t[i];
+    }
     cout << sum1;
 
     double l[12];
@@ -58,4 +61,5 @@ int main()
             min = l[i]; 
         }
     }
+    cout << "min: " << min << " max: " << max;
 }
