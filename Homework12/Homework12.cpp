@@ -45,20 +45,20 @@ int main()
     cout << sum1;
 
     double l[12];
-    double min, max;
+    int min, max;
     for (int i = 0;i < 12;i++) {
         cin >> l[i];
     }
-    min = l[0];
-    max = l[0];
+    min = 0;
+    max = 0;
     for (int i = 1;i < 12;i++) {
-        if (l[i] > max) 
+        if (l[i] > l[max])
         {
-            max = l[i]; 
+            max = i; 
         }
-        if (l[i] < min) 
+        if (l[i] < l[min]) 
         { 
-            min = l[i]; 
+            min = i; 
         }
     }
     cout << "min: " << min << " max: " << max;
